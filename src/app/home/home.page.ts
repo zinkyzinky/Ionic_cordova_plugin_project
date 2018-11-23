@@ -17,5 +17,7 @@ export class HomePage {
     error = function(v) { alert(v); };
 
     customPluginAlert.echo(input, success, error);
+
+    
   }
 }
