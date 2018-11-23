@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="custom-plugin-alert" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>customPluginAlert</name>
+
+
+    <!-- src에는 JavaScript Interface 파일이 위치한 곳을 기입한다 -->
+    <js-module name="customPluginAlert" src="www/customPluginAlert.js">
+
+        <!-- clobbers에 target으로 작성된 부분이 추후 JavaScript로 호출시 사용된다 -->
+        <!-- target은 window에 객체로 등록되며, 아래의 경우는 window.cordova.plugins.myPlugin으로 호출 할 수 있다-->
+        <clobbers target="cordova.plugins.customPluginAlert" />
+    </js-module>
+
+    <!-- platform 별 명세를 작성한다 -->
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="customPluginAlert">
+                <!-- value에는 작성한 플러그인이 위치할 곳의 package와 class명을 적어준다 -->
+                <param name="android-package" value="custom.plugin.alert.customPluginAlert" />
+            </feature>
+        </config-file>
+
+
+        <!-- source-file의 src에 위치한 파일을 build시 target-dir의 위치에 저장한다 -->
+        <source-file src="src/android/customPluginAlert.java" target-dir="src/custom/plugin/alert/customPluginAlert" />
+
+    </platform>
+</plugin>

@@ -1,5 +1,7 @@
 {
   "name": "cap",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

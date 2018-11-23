@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+
+  capCall(){
+
+    var customPluginAlert = window[customPluginAlert];
+
+    var input = document.getElementById("echo").nodeValue;
+    success = function(v) { alert(v); },
+    error = function(v) { alert(v); };
+
+    customPluginAlert.echo(input, success, error);
+  }
 }

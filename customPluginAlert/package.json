@@ -1,0 +1,17 @@
+{
+  "name": "custom.plugin.alert",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "custom.plugin.alert",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "ISC"
+}
